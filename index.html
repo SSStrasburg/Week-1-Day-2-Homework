@@ -3,6 +3,7 @@
 <html lang'en'>
   <head>
     <meta charset="utf-8">
+    <link href='style.css' rel='stylesheet'>
     <title>Force User Sign Up Form</title>
 
   </head>
@@ -11,90 +12,151 @@
   <body>
     <h1> Force User Sign Up Form </h1>
 
-    <fieldset>
-      <legend> Basic Information </legend>
-      <aside>
-        <label for='fullname-input'>Full Name</label>
-          <input types='text' name='fullname' id='fullname-input'>
-      </aside>
-
-      <aside>
-        <label for='origin-story'>Profile Pic</label>
-        <input type="text" name='origin-story' id='origin-story' placeholder="Place holder for file uploader">
-      </aside>
-
-      <aside>
-        <label for='email'>Email Address</label>
-        <input type='email' name='email' id='email' required>
-      </aside>
-
-      <aside>
-        <h2>Do you use your powers for good or evil today?</h2>
-        <label>
-          <input type='radio' name='light-or-dark' value='light'>
-          Light
-        </label>
-        <label>
-          <input type='radio' name='light-or-dark' value='dark'>
-          Dark
-        </label>
-        <label>
-          <input type='radio' name='light-or-dark' value='still deciding'>
-          Unsure
-        </label>
-      </aside>
-
-      <aside>
-        <label for='origin-story'>Origin Story</label>
-        <input type="text" name='origin-story' id='origin-story' placeholder="I was raised by a pack of wolves...">
-      </aside>
-
-    </fieldset>
-
-    <fieldset>
-      <legend> Abilities </legend>
-      <aside>
-        <label for='fullname-input'>Place holder for Lightsaber color drop down menue</label>
-          <input types='text' name='fullname' id='fullname-input'>
-
+    <form>
+      <fieldset class='display-boxL'>
+        <legend> Basic Information </legend>
+        <aside>
+          <label for='fullname-input'>Full Name</label>
+          <input type='text' class='full-length-input' name='fullname' id='fullname-input' placeholder="Steven Strasburg">
         </aside>
 
-      <aside>
-        <label for='email'>Place holder for How many ojects can you leveitage drop down menu numbers</label>
-        <input type='email' name='email' id='email' required>
-      </aside>
 
-      <aside>
-        <label for='origin-story'>Favorite Ability</label>
-        <input type="text" name='origin-story' id='origin-story' placeholder="Percognition">
-      </aside>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+          <p>Profile Picture</p>
+          <input type="file" name="fileToUpload" id="fileToUpload">
+          <input type="submit" value="Upload Image" name="submit">
+        </form>
 
-    </fieldset>
 
-    <fieldset>
-      <legend> Application Information </legend>
 
-      <aside>
-        <label for='origin-story'>Desired Mentor</label>
-        <input type="text" name='origin-story' id='origin-story' placeholder="Yoda">
-      </aside>
+        <aside>
+          <label for='email'>Email Address</label>
+          <input type='email' class='full-length-input' name='email' id='email' required placeholder="Steven@jedi.com">
+        </aside>
 
-      <aside>
-        <label for='origin-story'>Application Date</label>
-        <input type="text" name='origin-story' id='origin-story' placeholder="How do you get to the dark side">
-      </aside>
+        <aside>
+          <h2>Do you use your powers for good or evil today?</h2>
+            <input type='radio' name='light-or-dark' value='light'>
+            Light
+          <label>
+            <input type='radio' name='light-or-dark' value='dark'>
+            Dark
+          </label>
+          <label>
+            <input type='radio' name='light-or-dark' value='still deciding'>
+            Unsure
+          </label>
+        </aside>
 
-      <aside>
-        <label for='origin-story'>Application Password</label>
-        <input type="text" name='origin-story' id='origin-story' placeholder="I was raised by a pack of wolves...">
-      </aside>
+        <aside>
+          <label for='origin-story'>Origin Story</label>
+          <input type="text" class='multi-line-input' name='origin-story' id='origin-story' placeholder="I was raised by a pack of wolves...">
+        </aside>
 
-      <aside>
-        <label for='origin-story'>How do you get to the Dark Side</label>
-        <input type="text" name='origin-story' id='origin-story' placeholder="Do you kill sandmen, flirt with princess, have a mentor who is a dark sith lord?">
-      </aside>
+      </fieldset>
 
-    </fieldset>
+      <fieldset class='display-boxC'>
+        <legend> Abilities </legend>
+
+        <aside>
+            <p>Lightsaber Color</p>
+            <select name="color-lightsaber">
+            <option accesskey="select">select color</option>
+            <option value="green">Green</option>
+            <option value="blue">blue</option>
+            <option value="red">Red</option>
+            <option value="purple">Purple</option>
+            </select>
+        </aside>
+
+
+        <aside>
+          <p>How many objects can you leveitate?</p>
+          <select name='leveitate-number'>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+          </select>
+        </aside>
+
+
+        <aside>
+          <label for='favorite-ability'>Favorite Ability</label>
+          <input type="text" class='full-length-input' name='favorite-ability' id='favorite-ability' placeholder="Percognition">
+        </aside>
+
+        <aside>
+          <p>Pilot Experience?</p>
+            <input type='checkbox' name='vehical' value='speeder'>
+            Speeder
+            <input type='checkbox' name='vehical' value='transport'>
+            Transport
+            <input type='checkbox' name='vehical' value='x-wing'>
+            X-Wing
+          <label>
+            <input type='checkbox' name='vehical' value='tiefighter'>
+            Tie Fighter
+          </label>
+          <label>
+            <input type='checkbox' name='vehical' value='star-ship'>
+            Starship
+          </label>
+          <input type='checkbox' name='vehical' value='bantha'>
+          Bantha
+        </aside>
+
+      </fieldset>
+
+      <fieldset class='display-boxR'>
+        <legend> Application Information </legend>
+
+        <aside>
+          <label for='origin-story'>Desired Mentor</label>
+          <input type="text" class='full-length-input' name='origin-story' id='origin-story' placeholder="Yoda">
+        </aside>
+
+        <FORM name='Jordon-Check'>
+        Does Jordon look at all of these buttons?
+        <SELECT name="date" onchange='popupCalendar()'>
+        <OPTION value = 'yes' type=text >Yes</OPTION>
+        <OPTION value = 'no' type=text >No</OPTION>
+        <OPTION value = 'sometimes' type=text >Sometimes</OPTION>
+        </SELECT>
+        </FORM>
+
+        <aside>
+          <label for='origin-story'>Application Date</label>
+          <input type="date" name='date' id='origin-story' required>
+        </aside>
+
+        <aside>
+          <label for='origin-story'>Application Password</label>
+          <input type="text" name='origin-story' id='origin-story' placeholder="I was raised by a pack of wolves...">
+        </aside>
+
+        <aside>
+          <label for='origin-story'>How do you get to the Dark Side</label>
+          <input type="text" class='multi-line-input' name='origin-story' id='origin-story' placeholder="Do you kill sandmen, flirt with princess, have a mentor who is a dark sith lord?">
+        </aside>
+
+        <aside>
+          <button type="submit" value="Submit">Submit</button>
+          <button type="reset" value="Reset">Reset</button>
+        </aside>
+
+      </fieldset>
+
+    </form>
+
+    <footer>
+        <p>
+          &copy; 2017 The Republic
+        </p>
+    </footer>
 
   </body>
 

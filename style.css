@@ -1,0 +1,45 @@
+body{
+  font-family: Verdana, arial;
+}
+
+fieldset{
+  width: 30%;
+  vertical-align: top;
+  /*style="display: inline-block;"
+  style=float: left;*/
+}
+
+.display-boxL{
+  float: left;
+}
+.display-boxC{
+  float: inherit;
+}
+.display-boxR{
+  float: right;
+}
+
+h1{
+  font-size: 1em;
+}
+
+h2{
+  font-size: 1em;
+  font-style: normal;
+}
+
+
+
+.full-length-input{
+  width: 100%;
+}
+
+.multi-line-input{
+  width: 100%;
+  line-height: 3em;
+  /*height: 30%;*/
+}
+
+footer{
+  vertical-align: left;
+}
